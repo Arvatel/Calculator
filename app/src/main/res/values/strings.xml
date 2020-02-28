@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="bt_zero">0</string>
+    <string name="bt_one">1</string>
+    <string name="bt_two">2</string>
+    <string name="bt_three">3</string>
+    <string name="bt_four">4</string>
+    <string name="bt_five">5</string>
+    <string name="bt_six">6</string>
+    <string name="bt_seven">7</string>
+    <string name="bt_eight">8</string>
+    <string name="bt_nine">9</string>
+    <string name="bt_plus">+</string>
+    <string name="bt_minus">-</string>
+    <string name="bt_multiplication">*</string>
+    <string name="bt_division">/</string>
+    <string name="bt_open_bracket">(</string>
+    <string name="bt_close_bracket">)</string>
+    <string name="bt_delete">C</string>
+    <string name="bt_equally">=</string>
+    <string name="bt_point">.</string>
+
 </resources>
