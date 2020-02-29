@@ -19,5 +19,6 @@
     <string name="bt_delete">C</string>
     <string name="bt_equally">=</string>
     <string name="bt_point">.</string>
+    <string name="bt_all_delete">AC</string>
 
 </resources>
