@@ -324,6 +324,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="answer"
+        android:textColor="@color/colorText"
         android:background="@color/colorMain"
         android:autoSizeTextType="uniform"
 
