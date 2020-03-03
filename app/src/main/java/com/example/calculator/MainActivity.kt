@@ -8,13 +8,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var inputExpression: ReversePolishNotation
+    private var inputExpression = ReversePolishNotation("")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setOnClickListeners()
-        inputExpression.expression = ""
     }
 
     private fun setOnClickListeners()
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
         bt_delete.setOnClickListener {
             inputExpression.deleteLastSymbol()
-            textExpression.text = inputExpression.expression.toString()
+            textExpression.text = inputExpression.expression
         }
         bt_equally.setOnClickListener {
             var temp = inputExpression.equally().toString()
@@ -49,8 +48,6 @@ class MainActivity : AppCompatActivity() {
     {
         textExpression.append(char)
         inputExpression.expression = inputExpression.expression + char
-
-
     }
 }
 
