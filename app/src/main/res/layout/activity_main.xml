@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/constraintLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorMain"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/bt_multiplication"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonOperationStyle"
         android:text="@string/bt_multiplication"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_minus"
@@ -24,11 +21,7 @@
 
     <Button
         android:id="@+id/bt_nine"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_nine"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_six"
@@ -38,11 +31,7 @@
 
     <Button
         android:id="@+id/bt_one"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_one"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_point"
@@ -52,11 +41,7 @@
 
     <Button
         android:id="@+id/bt_two"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_two"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_zero"
@@ -66,25 +51,17 @@
 
     <Button
         android:id="@+id/bt_three"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_three"
 
-        app:layout_constraintBottom_toTopOf="@+id/bt_open_bracket"
+        app:layout_constraintBottom_toTopOf="@+id/bt_equally"
         app:layout_constraintHeight_percent="0.11"
         app:layout_constraintStart_toEndOf="@+id/bt_two"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
         android:id="@+id/bt_four"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_four"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_one"
@@ -94,11 +71,7 @@
 
     <Button
         android:id="@+id/bt_five"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_five"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_two"
@@ -108,11 +81,7 @@
 
     <Button
         android:id="@+id/bt_six"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_six"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_three"
@@ -122,11 +91,7 @@
 
     <Button
         android:id="@+id/bt_seven"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_seven"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_four"
@@ -136,11 +101,7 @@
 
     <Button
         android:id="@+id/bt_eight"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_eight"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_five"
@@ -150,11 +111,7 @@
 
     <Button
         android:id="@+id/bt_minus"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonOperationStyle"
         android:text="@string/bt_minus"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_plus"
@@ -164,12 +121,48 @@
 
     <Button
         android:id="@+id/bt_open_bracket"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonOperationStyle"
+
         android:text="@string/bt_open_bracket"
+        app:layout_constraintBottom_toTopOf="@+id/bt_seven"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <Button
+        android:id="@+id/bt_close_bracket"
+        style="@style/ButtonOperationStyle"
+
+        android:text="@string/bt_close_bracket"
+        app:layout_constraintBottom_toTopOf="@+id/bt_eight"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toEndOf="@+id/bt_open_bracket"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <Button
+        android:id="@+id/bt_delete"
+        style="@style/ButtonOperationStyle"
+        android:text="@string/bt_delete"
+
+        app:layout_constraintBottom_toTopOf="@+id/bt_division"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toEndOf="@+id/bt_all_delete"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <Button
+        android:id="@+id/bt_all_delete"
+        style="@style/ButtonOperationStyle"
+        android:text="@string/bt_all_delete"
+
+        app:layout_constraintBottom_toTopOf="@+id/bt_nine"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toEndOf="@+id/bt_close_bracket"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <Button
+        android:id="@+id/bt_equally"
+        style="@style/ButtonOperationStyle"
+        android:text="@string/bt_equally"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.11"
@@ -177,72 +170,8 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
-        android:id="@+id/bt_close_bracket"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
-        android:text="@string/bt_close_bracket"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toEndOf="@+id/bt_open_bracket"
-        app:layout_constraintWidth_percent="0.25" />
-
-    <Button
-        android:id="@+id/bt_delete"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-
-
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
-        android:text="@string/bt_delete"
-
-        app:layout_constraintBottom_toTopOf="@+id/bt_eight"
-        app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toEndOf="@+id/bt_all_delete"
-        app:layout_constraintWidth_percent="0.25" />
-
-    <Button
-        android:id="@+id/bt_all_delete"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-
-
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
-        android:text="@string/bt_all_delete"
-
-        app:layout_constraintBottom_toTopOf="@+id/bt_seven"
-        app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.25" />
-
-    <Button
-        android:id="@+id/bt_equally"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
-        android:text="@string/bt_equally"
-
-        app:layout_constraintBottom_toTopOf="@+id/bt_nine"
-        app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toEndOf="@+id/bt_delete"
-        app:layout_constraintWidth_percent="0.25" />
-
-    <Button
         android:id="@+id/bt_point"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonOperationStyle"
         android:text="@string/bt_point"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -252,11 +181,7 @@
 
     <Button
         android:id="@+id/bt_division"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonOperationStyle"
         android:text="@string/bt_division"
 
         app:layout_constraintBottom_toTopOf="@+id/bt_multiplication"
@@ -266,25 +191,17 @@
 
     <Button
         android:id="@+id/bt_plus"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonOperationStyle"
         android:text="@string/bt_plus"
 
-        app:layout_constraintBottom_toTopOf="@+id/bt_close_bracket"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toEndOf="@+id/bt_three"
+        app:layout_constraintStart_toEndOf="@+id/bt_equally"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
         android:id="@+id/bt_zero"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/ButtonNumberStyle"
         android:text="@string/bt_zero"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -293,47 +210,56 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <TextView
+
         android:id="@+id/textExpression"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorMain"
+        style="@style/TextStyle"
+        android:autoSizeMaxTextSize="50dp"
         android:text=""
-        android:autoSizeTextType="uniform"
 
         app:layout_constraintBottom_toTopOf="@+id/textAnswer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="1"
+        app:layout_constraintHeight_percent="0.34"
+        app:layout_constraintHorizontal_bias="0.5"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
+
         android:id="@+id/symbolEqual"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/colorMain"
+        style="@style/TextStyle"
+        android:gravity="center_horizontal"
         android:text="@string/bt_equally"
 
-        app:layout_constraintBottom_toTopOf="@+id/bt_all_delete"
-        app:layout_constraintHeight_percent="0.11"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/bt_open_bracket"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.25" />
+        app:layout_constraintWidth_percent="0.12" />
 
     <TextView
+
         android:id="@+id/textAnswer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="answer"
+        style="@style/TextStyle"
+
+        android:gravity="end"
+        android:text="12"
+        android:textAlignment="textEnd"
         android:textColor="@color/colorText"
-        android:background="@color/colorMain"
-        android:autoSizeTextType="uniform"
-
-
-        app:layout_constraintBottom_toTopOf="@+id/bt_equally"
+        app:layout_constraintBottom_toTopOf="@+id/bt_all_delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/symbolEqual"
-        app:layout_constraintWidth_percent="0.75" />
+        app:layout_constraintWidth_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

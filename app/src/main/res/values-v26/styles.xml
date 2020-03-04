@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonNumberStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/colorMain</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMaxTextSize">50dp</item>
+    </style>
+
+    <style name="ButtonOperationStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/colorMain</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMaxTextSize">50dp</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/colorMain</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:clickable">false</item>
+        <item name="android:autoSizeMinTextSize">5dp</item>
+        <item name="android:autoSizeStepGranularity">5dp</item>
+    </style>
+</resources>

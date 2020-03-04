@@ -11,10 +11,12 @@ public class MyCalculator
     private String regex = "(\\()|(\\))|([*\\/])|(?:(?<=[\\d\\)])\\ *)([+-])|(\\-?\\ *[\\d.]+)|(\\S)";
     private Pattern pattern = Pattern.compile(regex);
     private Stack<Double> result = new Stack<Double>();
-    private Stack<String> RPN = new Stack<String>();
+    private Stack<String> RPN = new Stack<String >();
 
     double calculate(String data) throws ArithmeticException
     {
+        result.clear();
+        RPN.clear();
         Matcher matcher = pattern.matcher(data);
         while (matcher.find())
         {

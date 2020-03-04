@@ -2,6 +2,7 @@ package com.example.calculator
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
                 addToInput((view as Button).text.toString())
             }
         }
+        textAnswer.setOnClickListener(null);
+        symbolEqual.setOnClickListener(null);
+        textExpression.setOnClickListener(null);
 
         bt_all_delete.setOnClickListener {
             textExpression.text = ""
@@ -45,8 +49,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun addToInput(char: String)
     {
-        textExpression.append(char)
         inputExpression += char
+        textExpression.append(char)
         update(false)
     }
 
@@ -58,13 +62,30 @@ class MainActivity : AppCompatActivity() {
         }
         try {
             var temp = myCalculator.calculate(inputExpression)
-            textAnswer.text = temp.toString()
             textAnswer.setTextColor(0xff272727.toInt())
+            if (temp.toString() == "Infinity") {
+                textAnswer.text = "∞"
+                return
+            }
+            if (temp.toString() == "-Infinity") {
+                textAnswer.text = "-∞"
+                return
+            }
+            if (temp.toString() == "NaN") {
+                textAnswer.text = "Not a number"
+                textAnswer.setTextColor(0xffd5004e.toInt())
+                return
+            }
+            textAnswer.text = temp.toString()
+
         }
         catch (e: ArithmeticException)
         {
-            if(showError) textAnswer.text = "Error"
             textAnswer.setTextColor(0xff939393.toInt())
+            if(showError){
+                textAnswer.text = "Error"
+                textAnswer.setTextColor(0xffd5004e.toInt())
+            }
         }
     }
 }
