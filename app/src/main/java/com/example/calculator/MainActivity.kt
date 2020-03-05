@@ -20,15 +20,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setOnClickListeners()
     {
-        for (view in constraintLayout.children)
+        for (view in buttonLayout.children)
         {
             view.setOnClickListener {
                 addToInput((view as Button).text.toString())
             }
         }
-        textAnswer.setOnClickListener(null);
-        symbolEqual.setOnClickListener(null);
-        textExpression.setOnClickListener(null);
 
         bt_all_delete.setOnClickListener {
             textExpression.text = ""
