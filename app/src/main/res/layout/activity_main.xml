@@ -124,9 +124,9 @@
         style="@style/ButtonOperationStyle"
 
         android:text="@string/bt_open_bracket"
-        app:layout_constraintBottom_toTopOf="@+id/bt_seven"
+        app:layout_constraintBottom_toTopOf="@+id/bt_eight"
         app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_all_delete"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
@@ -134,7 +134,7 @@
         style="@style/ButtonOperationStyle"
 
         android:text="@string/bt_close_bracket"
-        app:layout_constraintBottom_toTopOf="@+id/bt_eight"
+        app:layout_constraintBottom_toTopOf="@+id/bt_nine"
         app:layout_constraintHeight_percent="0.11"
         app:layout_constraintStart_toEndOf="@+id/bt_open_bracket"
         app:layout_constraintWidth_percent="0.25" />
@@ -142,21 +142,21 @@
     <Button
         android:id="@+id/bt_delete"
         style="@style/ButtonOperationStyle"
-        android:text="@string/bt_delete"
 
+        android:text="@string/bt_delete"
         app:layout_constraintBottom_toTopOf="@+id/bt_division"
         app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toEndOf="@+id/bt_all_delete"
+        app:layout_constraintStart_toEndOf="@+id/bt_close_bracket"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
         android:id="@+id/bt_all_delete"
         style="@style/ButtonOperationStyle"
-        android:text="@string/bt_all_delete"
 
-        app:layout_constraintBottom_toTopOf="@+id/bt_nine"
+        android:text="@string/bt_all_delete"
+        app:layout_constraintBottom_toTopOf="@+id/bt_seven"
         app:layout_constraintHeight_percent="0.11"
-        app:layout_constraintStart_toEndOf="@+id/bt_close_bracket"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
@@ -231,10 +231,10 @@
         android:id="@+id/symbolEqual"
         style="@style/TextStyle"
         android:gravity="center_horizontal"
-        android:text="@string/bt_equally"
 
+        android:text="@string/bt_equally"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/bt_open_bracket"
+        app:layout_constraintBottom_toTopOf="@+id/bt_all_delete"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.12" />
@@ -245,10 +245,10 @@
         style="@style/TextStyle"
 
         android:gravity="end"
-        android:text="12"
+        android:text=""
         android:textAlignment="textEnd"
         android:textColor="@color/colorText"
-        app:layout_constraintBottom_toTopOf="@+id/bt_all_delete"
+        app:layout_constraintBottom_toTopOf="@+id/bt_close_bracket"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintHorizontal_bias="0.0"

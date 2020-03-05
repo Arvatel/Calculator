@@ -6,20 +6,25 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ButtonStyle">
+    <style name="ButtonNumberStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorMain</item>
-        <item name="android:autoSizeTextType" tools:targetApi="o">uniform</item>
+    </style>
+
+    <style name="ButtonOperationStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/colorMain</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="TextStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorMain</item>
-        <item name="android:autoSizeTextType" tools:targetApi="o">uniform</item>
-        <item name="android:fontFamily" tools:targetApi="o">casual</item>
         <item name="android:clickable">false</item>
+
     </style>
 
 </resources>
