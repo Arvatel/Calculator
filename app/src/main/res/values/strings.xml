@@ -12,8 +12,8 @@
     <string name="bt_nine">9</string>
     <string name="bt_plus">+</string>
     <string name="bt_minus">-</string>
-    <string name="bt_multiplication">*</string>
-    <string name="bt_division">/</string>
+    <string name="bt_multiplication">×</string>
+    <string name="bt_division">÷</string>
     <string name="bt_open_bracket">(</string>
     <string name="bt_close_bracket">)</string>
     <string name="bt_delete">C</string>

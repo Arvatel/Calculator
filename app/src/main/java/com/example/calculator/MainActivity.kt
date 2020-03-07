@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         bt_delete.setOnClickListener {
             if (inputExpression.isNotEmpty()) {
                 inputExpression = inputExpression.substring(0, inputExpression.length - 1)
-                textExpression.text = inputExpression
+                textExpression.text = textExpression.text.substring(0, textExpression.text.length - 1)
                 update(false)
             }
         }
@@ -46,7 +46,11 @@ class MainActivity : AppCompatActivity() {
     }
     private fun addToInput(char: String)
     {
-        inputExpression += char
+        when(char) {
+            "×" -> inputExpression += "*"
+            "÷" -> inputExpression += "/"
+            else -> inputExpression += char
+        }
         textExpression.append(char)
         update(false)
     }
