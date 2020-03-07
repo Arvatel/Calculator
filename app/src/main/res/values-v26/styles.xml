@@ -7,6 +7,7 @@
         <item name="android:background">@color/colorMain</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:autoSizeMaxTextSize">50dp</item>
+        <item name="android:fontFamily">@font/news_cycle</item>
     </style>
 
     <style name="ButtonOperationStyle">
@@ -16,6 +17,7 @@
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:autoSizeStepGranularity">7dp</item>
+        <item name="android:fontFamily">@font/news_cycle</item>
     </style>
 
     <style name="TextStyle">
@@ -23,7 +25,7 @@
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorMain</item>
         <item name="android:autoSizeTextType">uniform</item>
-        <item name="android:fontFamily">casual</item>
+        <item name="android:fontFamily">@font/news_cycle</item>
         <item name="android:clickable">false</item>
         <item name="android:autoSizeMinTextSize">5dp</item>
         <item name="android:autoSizeStepGranularity">5dp</item>

@@ -10,6 +10,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorMain</item>
+        <item name="fontFamily">@font/news_cycle</item>
     </style>
 
     <style name="ButtonOperationStyle">
@@ -17,12 +18,14 @@
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorMain</item>
         <item name="android:textColor">@color/colorPrimary</item>
+        <item name="fontFamily">@font/news_cycle</item>
     </style>
 
     <style name="TextStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorMain</item>
+        <item name="fontFamily">@font/news_cycle</item>
         <item name="android:clickable">false</item>
 
     </style>
