@@ -1,6 +1,5 @@
 package com.example.calculator;
 
-import java.util.ArrayList;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -80,6 +79,7 @@ public class MyCalculator
         if(temp.equals("*")) result.push(a * b);
         if(temp.equals("/")) result.push(a / b);
     }
+
     int priority(String temp)
     {
         if (temp.equals("*") || temp.equals("/")) return 2;
