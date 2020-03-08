@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    /** string for expression which will be sent in calculating method*/
     private var inputExpression = ""
     private val myCalculator = MyCalculator()
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setOnClickListeners()
     }
 
+    /** function for creating onClickListeners for each button */
     private fun setOnClickListeners()
     {
         for (view in buttonLayout.children)
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             inputExpression = ""
             update(false)
         }
+
         bt_delete.setOnClickListener {
             if (inputExpression.isNotEmpty()) {
                 inputExpression = inputExpression.substring(0, inputExpression.length - 1)
@@ -39,11 +42,14 @@ class MainActivity : AppCompatActivity() {
                 update(false)
             }
         }
+
         bt_equally.setOnClickListener {
             update(true)
         }
 
     }
+
+    /** function for adding symbols in expression and text for user*/
     private fun addToInput(char: String)
     {
         when(char) {
@@ -55,6 +61,8 @@ class MainActivity : AppCompatActivity() {
         update(false)
     }
 
+    /** function for updating answer of expression
+     if showError - true, user will see that expression isn't correct*/
     private fun update(showError: Boolean)
     {
         if (inputExpression == ""){
@@ -63,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         }
         try {
             var temp = myCalculator.calculate(inputExpression)
-            textAnswer.setTextColor(0xff272727.toInt())
+            textAnswer.setTextColor(0xff272727.toInt()) // dark grey
             if (temp.toString() == "Infinity") {
                 textAnswer.text = "∞"
                 return
@@ -74,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (temp.toString() == "NaN") {
                 textAnswer.text = "Not a number"
-                textAnswer.setTextColor(0xffd5004e.toInt())
+                textAnswer.setTextColor(0xffd5004e.toInt()) // red
                 return
             }
             textAnswer.text = temp.toString()
@@ -82,10 +90,10 @@ class MainActivity : AppCompatActivity() {
         }
         catch (e: ArithmeticException)
         {
-            textAnswer.setTextColor(0xff939393.toInt())
+            textAnswer.setTextColor(0xff939393.toInt()) // light grey
             if(showError){
                 textAnswer.text = "Error"
-                textAnswer.setTextColor(0xffd5004e.toInt())
+                textAnswer.setTextColor(0xffd5004e.toInt()) // red
             }
         }
     }

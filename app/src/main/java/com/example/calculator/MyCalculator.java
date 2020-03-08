@@ -7,11 +7,20 @@ import java.util.regex.Pattern;
 public class MyCalculator
 {
     // with space (\()|(\))|([*\/])|(?:(?<=[\d\)])\ *)([+-])|((?:\-\ *[\d.]+)|(?:[\d.]+))|(\S)
+
+    /** This regex separates expression into 6 groups:
+     * 1. open bracket - "("
+     * 2. close bracket - ")"
+     * 3. multiplication and division - "*", "/"
+     * 4. plus and minus - "-", "+"
+     * 5. numbers (also negative)
+     * 6. Everything else, if this group isn't empty it means that expression isn't correct **/
     private String regex = "(\\()|(\\))|([*\\/])|(?:(?<=[\\d\\)])\\ *)([+-])|(\\-?\\ *[\\d.]+)|(\\S)";
     private Pattern pattern = Pattern.compile(regex);
     private Stack<Double> result = new Stack<Double>();
     private Stack<String> RPN = new Stack<String >();
 
+    /** method for calculating expression **/
     double calculate(String data) throws ArithmeticException
     {
         result.clear();
@@ -67,6 +76,7 @@ public class MyCalculator
         return result.pop();
     }
 
+    /** method for calculating answer **/
     private void calc(String temp)
     {
         if (result.empty()) throw new ArithmeticException();
@@ -80,6 +90,7 @@ public class MyCalculator
         if(temp.equals("/")) result.push(a / b);
     }
 
+    /** method for getting priority of symbol **/
     int priority(String temp)
     {
         if (temp.equals("*") || temp.equals("/")) return 2;
