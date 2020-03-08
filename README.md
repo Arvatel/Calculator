@@ -9,9 +9,14 @@ This is just normal calculator
 1. XML
 1. Regular expression
 1. Android studio
-1. [Shunting-yard algorithm](https://en.m.wikipedia.org/wiki/Shunting-yard_algorithm)
+1. [Shunting-yard algorithm]
+
+## How to download it?
+- I don't know :)
+
+## How is it works
+At first, I used [Shunting-yard algorithm] that's why it possible to use brackets and correctly calculate with priority of operations.
+For reorganization text from expression I used regex`(\\()|(\\))|([*\\/])|(?:(?<=[\\d\\)])\\ *)([+-])|(\\-?\\ *[\\d.]+)|(\\S)` it separated symbols into *six* groups.
 
 
-
-### Links
-[Download fonts](https://www.fonts-online.ru)
+[Shunting-yard algorithm]: https://en.m.wikipedia.org/wiki/Shunting-yard_algorithm
