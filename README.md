@@ -1,7 +1,7 @@
 # Calculator
 This is just normal calculator
 
-<img src="./images/calculator.jpg" alt="screenShot" width="200"/>
+<img src="./images/calculator.jpg" alt="screenShot" width="300"/>
 
 ## Used languages and technologies:
 1. Java
