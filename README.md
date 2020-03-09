@@ -18,6 +18,12 @@ This is just normal calculator
 
 <img src="./images/calculator.jpg" alt="screenShot" width="300"/>
 
+## How to download
+1. Download file calculator.apk from directory download-app/
+2. Run this file on your device
+	* You should agree to install from unknown sources
+1. Done!
+
 ## How is it works
 I used [Shunting-yard algorithm] that's why it possible to use brackets and correctly calculate with priority of operations. 
 For reorganization text from expression I used regex `(\\()|(\\))|([*\\/])|(?:(?<=[\\d\\)])\\ *)([+-])|(\\-?\\ *[\\d.]+)|(\\S)` it separated symbols into *six* groups.
